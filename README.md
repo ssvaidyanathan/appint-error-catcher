@@ -1,7 +1,7 @@
 # appint-error-catcher
 
 ## Pre-req
-- [integrationcli](https://github.com/GoogleCloudPlatform/application-integration-management-toolkit)
+- Install [integrationcli](https://github.com/GoogleCloudPlatform/application-integration-management-toolkit)
 ```
 curl -L https://raw.githubusercontent.com/GoogleCloudPlatform/application-integration-management-toolkit/main/downloadLatest.sh | sh -
 ```
@@ -26,15 +26,17 @@ sed -i "s/PREFIX/$PREFIX/g" ./dev/overrides/overrides.json
 mv ./dev/connectors/prefix-appintlab-pubsub-connector.json ./dev/connectors/${PREFIX}-appintlab-pubsub-connector.json
 ```
 
-- Create the Integration and Connectors using the integrationcli apply command
+- Set the Integration Preferences
 
 ```
 token=$(gcloud auth print-access-token)
 region=<region>
 project=<project>
 integrationcli preferences set -r $region -p $project -t $token
+```
+- Create the Integration and Connectors using the integrationcli apply command
 
-
+```
 integrationcli integrations apply -f . -e dev --wait=true
 ```
 
