@@ -22,5 +22,17 @@ mv ./dev/connectors/prefix-appintlab-pubsub-connector.json ./dev/connectors/${PR
 - Create the Integration and Connectors using the integrationcli apply command
 
 ```
-integrationcli 
+token=$(gcloud auth print-access-token)
+region=<region>
+project=<project>
+integrationcli preferences set -r $region -p $project -t $token
+
+
+integrationcli integrations apply -f . -e dev
+```
+
+- Once the "ErrorCatcher" Integration is created and published, click "Test"
+- In a terminal, run the following command to see if the message is published to your topic
+```
+gcloud pubsub subscriptions pull $PREFIX-appintlab-sub --auto-ack --project=$project
 ```
