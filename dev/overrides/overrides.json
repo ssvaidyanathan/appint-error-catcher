@@ -1,0 +1,33 @@
+{
+	"task_overrides": [
+		{
+			"task": "GenericRestV2Task",
+			"taskId": "1",
+			"parameters": {
+				"url": {
+					"key": "url",
+					"value": {
+						"stringValue": "https://dev-34.160.105.96.nip.io/appint-error-catcher/post"
+					}
+				}
+			}
+		}
+	],
+	"connection_overrides": [
+		{
+			"taskId": "2",
+			"task": "GenericConnectorTask",
+			"parameters": {
+				"connectionName": "<prefix>-appintlab-pubsub-connector"
+			}
+		}
+	],
+	"integration_overrides": {
+		"databasePersistencePolicy": "DATABASE_PERSISTENCE_POLICY_UNSPECIFIED",
+		"enableVariableMasking": false,
+		"cloudLoggingDetails": {
+			"cloudLoggingSeverity": "CLOUD_LOGGING_SEVERITY_UNSPECIFIED",
+			"enableCloudLogging": false
+		}
+	}
+}
