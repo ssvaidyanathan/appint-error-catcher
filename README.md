@@ -2,10 +2,14 @@
 
 ## Pre-req
 - [integrationcli](https://github.com/GoogleCloudPlatform/application-integration-management-toolkit)
+```
+curl -L https://raw.githubusercontent.com/GoogleCloudPlatform/application-integration-management-toolkit/main/downloadLatest.sh | sh -
+```
 - A GCP Project with Application Integration and Integration Connectors already enabled
 - Roles to create/publish Integrations and create connectors
 
 ## Steps
+- clone this repo
 - create a Pub/Sub topic - `<prefix>-appintlab`
 - update the topic_id in the [prefix-appintlab-pubsub-connector.json](./dev/connectors/prefix-appintlab-pubsub-connector.json) and the connection_name in the [overrides.json](./dev/overrides/overrides.json)
 ```
@@ -31,7 +35,7 @@ project=<project>
 integrationcli preferences set -r $region -p $project -t $token
 
 
-integrationcli integrations apply -f . -e dev
+integrationcli integrations apply -f . -e dev --wait=true
 ```
 
 - Once the "ErrorCatcher" Integration is created and published, click "Test"
