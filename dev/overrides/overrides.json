@@ -18,7 +18,7 @@
 			"taskId": "2",
 			"task": "GenericConnectorTask",
 			"parameters": {
-				"connectionName": "ssv-appintlab-pubsub-connector"
+				"connectionName": "PREFIX-appintlab-pubsub-connector"
 			}
 		}
 	],

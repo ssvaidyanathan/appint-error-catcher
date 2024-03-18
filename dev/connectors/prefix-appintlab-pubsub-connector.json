@@ -11,7 +11,7 @@
 		},
 		{
 			"key": "topic_id",
-			"stringValue": "ssv-appintlab"
+			"stringValue": "PREFIX-appintlab"
 		}
 	],
 	"authConfig": {},
