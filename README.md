@@ -1,6 +1,7 @@
 # appint-error-catcher
 
 ## Pre-req
+- gcloud SDK
 - Install [integrationcli](https://github.com/GoogleCloudPlatform/application-integration-management-toolkit)
 ```
 curl -L https://raw.githubusercontent.com/GoogleCloudPlatform/application-integration-management-toolkit/main/downloadLatest.sh | sh -
