@@ -10,6 +10,9 @@
 - update the topic_id in the [prefix-appintlab-pubsub-connector.json](./dev/connectors/prefix-appintlab-pubsub-connector.json) and the connection_name in the [overrides.json](./dev/overrides/overrides.json)
 ```
 export PREFIX=<prefix>
+```
+and then
+```
 sed -i "s/PREFIX/$PREFIX/g" ./dev/connectors/prefix-appintlab-pubsub-connector.json
 sed -i "s/PREFIX/$PREFIX/g" ./dev/overrides/overrides.json
 ```
