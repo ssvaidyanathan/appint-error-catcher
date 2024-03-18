@@ -5,6 +5,7 @@
 ```
 curl -L https://raw.githubusercontent.com/GoogleCloudPlatform/application-integration-management-toolkit/main/downloadLatest.sh | sh -
 ```
+- Run `integrationcli --version` to make sure its installed correctly
 - A GCP Project with Application Integration and Integration Connectors already enabled
 - Roles to create/publish Integrations and create connectors
 
